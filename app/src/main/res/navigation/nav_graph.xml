@@ -7,7 +7,16 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.todoapp.fragments.ListFragment"
-        android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        android:name="com.example.todoapp.fragments.list.ListFragment"
+        android:label="ToDo List"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.todoapp.fragments.add.AddFragment"
+        android:label="Add ToDo"
+        tools:layout="@layout/fragment_add" />
 </navigation>
